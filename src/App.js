@@ -11,7 +11,7 @@ function App() {
   return (
     <DataState>
       <div className="App">
-        <div className="Header">ALPACA GENERATOR</div>
+        <div className="Header">MAYO GENERATOR</div>
         <div className="Container">
           <div className='LeftImage'>
             <Image />

@@ -63,14 +63,10 @@ const Customize = () => {
 
     const data = useContext(DataContext);
     const availEntity = [
-        data.eyesArr,
-        data.earsArr,
         data.bgsArr,
-        data.accsArr,
-        data.hairArr,
-        data.legArr,
-        data.mouthArr,
-        data.neckArr,
+        data.mayoArr,
+        data.clArr,
+        data.noseArr,
     ]
 
     const [activeLabel, setActiveLabel] = useState(availEntity[0][0]);
@@ -86,23 +82,15 @@ const Customize = () => {
     }
 
     const modifyImage = (activeLabel, activeName, x) => {
-        if (activeLabel === 'Ears') {
+        if (activeLabel === 'Nose') {
             data.setEar(data.getImage(activeName, x.name))
-        } else if (activeLabel === 'Eyes') {
+        } else if (activeLabel === 'Clothings') {
             data.setEye(data.getImage(activeName, x.name))
-        } else if (activeLabel === 'Backgrounds') {
+        } else if (activeLabel === 'Mayo') {
             data.setBg(data.getImage(activeName, x.name))
-        } else if (activeLabel === 'Accessories') {
+        } else if (activeLabel === 'Backgrounds') {
             data.setAcc(data.getImage(activeName, x.name))
-        } else if (activeLabel === 'Hair') {
-            data.setHair(data.getImage(activeName, x.name))
-        } else if (activeLabel === 'Leg') {
-            data.setLeg(data.getImage(activeName, x.name))
-        } else if (activeLabel === 'Mouth') {
-            data.setMouth(data.getImage(activeName, x.name))
-        } else if (activeLabel === 'Neck') {
-            data.setNeck(data.getImage(activeName, x.name))
-        }
+        } 
     }
 
     const actDoubleCrazy = (x) => {
@@ -115,7 +103,7 @@ const Customize = () => {
             .then(function (dataUrl) {
                 // download(dataUrl, 'my-node.png');
                 const link = document.createElement('a')
-                link.download = 'my-image-name.png'
+                link.download = 'mayopixel.png'
                 link.href = dataUrl
                 link.click()
             });
@@ -157,7 +145,7 @@ const Customize = () => {
     return (
         <>
             <div>
-                <TextHeader>Accessorize the Alpaca's</TextHeader>
+                <TextHeader>Dress up your Mayo</TextHeader>
                 <ButtonGroup>
                     {availEntity.map(type => (
                         <ButtonToggle

@@ -11,13 +11,8 @@ const Image = () => {
     return (
         <div className="wrapper" id="image_wrapper_id">
             <img className="bg" src={data.bg} alt="" />
-            <img className="acc" src={data.acc} alt="" />
-            <img className="ear" src={data.ear} alt="" />
-            <img className="eye" src={data.eye} alt="" />
-            <img className="hair" src={data.hair} alt="" />
-            <img className="leg" src={data.leg} alt="" />
-            <img className="mouth" src={data.mouth} alt="" />
-            <img className="neck" src={data.neck} alt="" />
+            <img className="mayo" src={data.mayo} alt="" />
+            <img className="cl" src={data.cl} alt="" />
             <img className="nose" src={data.nose} alt="" />
         </div>
     )
