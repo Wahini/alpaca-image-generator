@@ -64,9 +64,9 @@ const Customize = () => {
     const data = useContext(DataContext);
     const availEntity = [
         data.bgsArr,
-        data.mayoArr,
         data.clArr,
         data.noseArr,
+        data.mayoArr,
     ]
 
     const [activeLabel, setActiveLabel] = useState(availEntity[0][0]);
@@ -82,13 +82,13 @@ const Customize = () => {
     }
 
     const modifyImage = (activeLabel, activeName, x) => {
-        if (activeLabel === 'Nose') {
+        if (activeLabel === 'Clothings') {
             data.setEar(data.getImage(activeName, x.name))
-        } else if (activeLabel === 'Clothings') {
+        } else if (activeLabel === 'Nose') {
             data.setEye(data.getImage(activeName, x.name))
-        } else if (activeLabel === 'Mayo') {
-            data.setBg(data.getImage(activeName, x.name))
         } else if (activeLabel === 'Backgrounds') {
+            data.setBg(data.getImage(activeName, x.name))
+        } else if (activeLabel === 'Mayo') {
             data.setAcc(data.getImage(activeName, x.name))
         } 
     }

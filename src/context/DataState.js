@@ -4,9 +4,9 @@ import DataContext from './DataContext';
 const DataState = (props) => {
 
     const [bg, setBg] = useState(getImage("backgrounds", "dusk"));
-    const [mayo, setMayo] = useState(getImage("mayo", "boy"));
-    const [cl, setCl] = useState(getImage("clothings", "red_shirt"));
-    const [nose, setNose] = useState(getImage("nose", "normal"));
+    const [mayo, setMayo] = useState(getImage("mayo", "zombie"));
+    const [cl, setCl] = useState(getImage("clothings", "yellow_raincoat"));
+    const [nose, setNose] = useState(getImage("nose", "scar"));
 
     const bgsArr = [
         "Backgrounds",
